@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="fa fa-fire"></span> Home Automation</h1>
+      <hr>
+      <h2 class="text-center">Controls</h2>
+      <br>
+
+      <div class="text-center">
+        <a href="/Company"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Open Bootstrap</button></a>
+        <button type="monon" class="btn btn-lg btn-danger control" value="rf l4 on"><span class="fa fa-credit-card"></span> Moms Lamp on</button></a>
+      </div>
+         
+      <div>
+        " " 
+      </div>
+      <div class="text-center">
+        <a href="/table2"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> Control L4 On</button></a>
+        <button type="monoff"><button class="btn btn-lg btn-danger control" value="rf l4 off"><span class="fa fa-credit-card"></span> Moms lamp off</button></a>
+      </div>
+      <img src="howx10.gif" alt="X10" width="660" height="345">
+      <!-- <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"> -->
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> | <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+// get the value (x10 command) from the button classes - this will pull value from clicked button.
+$(".control").on("click",function() {
+ value = $(this).val();
+ console.log(value);
+ $.post("api/x10 " + value);  
+});
+
+
+
+</script>
